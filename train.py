@@ -22,3 +22,10 @@ y = data.iloc[:,8].values
 
 # SPLITTING THE TRAINING AND VALIDATION DATA
 x_train, x_val, y_train, y_val = train_test_split(x, y, test_size = 0.2, random_state = 0)
+
+# BUILDING THE NEURAL NETWORK
+model = Sequential()
+model.add(Dense(64, input_dim = 12, activation='relu'))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(4, activation='softmax'))
