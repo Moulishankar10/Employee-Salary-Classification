@@ -15,3 +15,10 @@ import matplotlib.pyplot as plt
 
 # IMPORTING DATA
 data = pd.read_csv("data/salary.csv")
+
+# PREPROCESSING DATA
+x = data.iloc[:,:7].values
+y = data.iloc[:,8].values
+
+# SPLITTING THE TRAINING AND VALIDATION DATA
+x_train, x_val, y_train, y_val = train_test_split(x, y, test_size = 0.2, random_state = 0)
