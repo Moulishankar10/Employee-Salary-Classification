@@ -53,3 +53,11 @@ plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
 plt.legend(['Train Accuracy', 'Validation Accuracy'], loc='bottom right')
 plt.show()
+
+# ACCURACY OF THE MODEL
+score = model.evaluate(x_val, y_val, verbose=0)
+print(f"\nAccuracy of the model : {round(score[1]*100,4)}%")
+
+# SAVING THE TRAINED MODEL
+save_model(model,'./model')
+print(f"\n\n ---- Successfully stored the trained model at {PATH} ---- \n\n")
