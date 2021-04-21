@@ -9,7 +9,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.layers import Dense
-from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import save_model 
 import matplotlib.pyplot as plt
 
@@ -17,25 +16,21 @@ import matplotlib.pyplot as plt
 data = pd.read_csv("data/salary.csv")
 
 # PREPROCESSING DATA
-x = data.iloc[:,:7].values
-y = data.iloc[:,8].values
-
-x = np.asarray(x).astype(np.float32)
+x = data.iloc[:,[0,1,2,3,4]].values
+y = data.iloc[:,5].values
 
 # SPLITTING THE TRAINING AND VALIDATION DATA
-x_train, x_val, y_train, y_val = train_test_split(x, y, test_size = 0.2, random_state = 0)
+x_train, x_val, y_train, y_val = train_test_split(x, y, test_size = 0.1, random_state = None, stratify = y)
 
 # BUILDING THE NEURAL NETWORK
 model = Sequential()
-model.add(Dense(64, input_dim = 12, activation='relu'))
-model.add(Dense(64, activation='relu'))
-model.add(Dense(64, activation='relu'))
-model.add(Dense(4, activation='softmax'))
+model.add(Dense(24, input_dim = 5, activation='relu'))
+model.add(Dense(10, activation='relu'))
+model.add(Dense(3, activation='softmax'))
 
 # TRAINING THE DATA
-opt = Adam(learning_rate = 0.01)
-model.compile(loss = 'sparse_categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
-history = model.fit(x_train, y_train, epochs = 150, batch_size = 32, validation_data = (x_val, y_val))
+model.compile(loss = 'sparse_categorical_crossentropy', optimizer = 'Adam', metrics = ['accuracy'])
+history = model.fit(x_train, y_train, epochs = 15, batch_size = 6, validation_data = (x_val, y_val))
 print("\n\n ----- Model is trained successfully ! ----- \n\n")
 
 # VISUALISING THE MODEL LOSS
@@ -53,12 +48,12 @@ plt.plot(history.history['val_accuracy'])
 plt.title('MODEL ACCURACY')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
-plt.legend(['Train Accuracy', 'Validation Accuracy'], loc='bottom right')
+plt.legend(['Train Accuracy', 'Validation Accuracy'], loc='top right')
 plt.show()
 
 # ACCURACY OF THE MODEL
 score = model.evaluate(x_val, y_val, verbose=0)
-print(f"\nAccuracy of the model : {round(score[1]*100,4)}%")
+print(f"\nAccuracy of the model : {round(score[1]*100,2)}%")
 
 # SAVING THE TRAINED MODEL
 PATH = './model'
