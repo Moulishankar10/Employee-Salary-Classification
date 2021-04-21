@@ -6,6 +6,5 @@ An ML Classification model, developed in TensorFlow, which classifies the range 
 
 [Moulishankar M R](https://github.com/Moulishankar10)
 
-### Development Status 
+[Vigneshwar Ravichandar](https://github.com/ToastCoder)
 
---- Under Training ---
