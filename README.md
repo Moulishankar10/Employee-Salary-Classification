@@ -16,19 +16,19 @@ Model Accuracy Acheived : Above 98%
 
 ## Required Libraries
 
-NumPy
-Pandas
-Matplotlib
-Scikit-learn
-Tensorflow
+ 1. NumPy
+ 2. Pandas
+ 3. Matplotlib
+ 4. Scikit-learn
+ 5. Tensorflow
 
 ## Tested With
 
- Python 3.7.10
- NumPy 1.19.5
- Pandas 1.1.5
- Matplotlib 3.2.2
- Scikit-learn 0.22.2.post1
- TensorFlow 2.4.1
+ 1. Python 3.7.10
+ 2. NumPy 1.19.5
+ 3. Pandas 1.1.5
+ 4. Matplotlib 3.2.2
+ 5. Scikit-learn 0.22.2.post1
+ 6. TensorFlow 2.4.1
  
 
