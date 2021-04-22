@@ -23,7 +23,7 @@ Model Accuracy Acheived : Above 98%
  5. Scikit-learn 0.22.2.post1
  6. TensorFlow 2.4.1
 
-## Classifications
+## Classifications ( Salary Range )
 
  1. Low
  2. Medium
