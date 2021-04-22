@@ -22,5 +22,17 @@ Model Accuracy Acheived : Above 98%
  4. Matplotlib 3.2.2
  5. Scikit-learn 0.22.2.post1
  6. TensorFlow 2.4.1
- 
 
+## Classifications
+
+ 1. Low
+ 2. Medium
+ 3. High
+
+## Input Features
+
+ 1. Satisfaction level of the Employee's performance
+ 2. Recent Evaluation of the Employee
+ 3. Number of projects completed successfully
+ 4. Average working hours per month
+ 5. Number of Years working in the company
