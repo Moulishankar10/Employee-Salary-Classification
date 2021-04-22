@@ -14,14 +14,6 @@ Model Accuracy Acheived : Above 98%
 
 [Vigneshwar Ravichandar](https://github.com/ToastCoder)
 
-## Required Libraries
-
- 1. NumPy
- 2. Pandas
- 3. Matplotlib
- 4. Scikit-learn
- 5. Tensorflow
-
 ## Tested With
 
  1. Python 3.7.10
