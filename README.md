@@ -2,9 +2,9 @@
 
 ## About
 
-An ML Classification model, developed in TensorFlow, which classifies the salary range of an employee based on the employee's company records.
+An ML Classification model, developed in TensorFlow, which classifies the salary range of an employee based on the employee's performance.
 
-The model collects some information about an employee's performance and helps to classify the salary range of an employee which is to be decided for the employee by company.
+The model collects the track records of an employee and helps to classify the salary range of an employee which is to be decided for the employee by company.
 
 Model Accuracy Acheived : Above 98%
 
@@ -23,12 +23,6 @@ Model Accuracy Acheived : Above 98%
  5. Scikit-learn 0.22.2.post1
  6. TensorFlow 2.4.1
 
-## Classifications ( Salary Range )
-
- 1. Low
- 2. Medium
- 3. High
-
 ## Input Features
 
  1. Satisfaction level of the Employee's performance
@@ -36,3 +30,11 @@ Model Accuracy Acheived : Above 98%
  3. Number of projects completed successfully
  4. Average working hours per month
  5. Number of Years working in the company
+
+## Classifications ( Salary Range )
+
+ 1. Low
+ 2. Medium
+ 3. High
+
+
